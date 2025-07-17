@@ -1,1 +1,1 @@
-# ai_club
+# Technical Assessment for Web Development Position
