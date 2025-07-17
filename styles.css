@@ -1,0 +1,260 @@
+/* --------- Imports --------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); /* text-weight font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); /* heading font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Parisienne&family=Pattaya&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* --------- Variables --------- */
+:root {
+    --twine: #c6a367;    
+    --light-twine: #f4c471;     
+    --lisbon_brown: #36311a;
+    --white_rock: #efe2c8;
+    --cumin: #894322;
+    --cumin-opaque: #894322ef;
+    --trout: #525966;
+    --foggy_gray: #cdc6b9;
+    --edward: #a9acab;
+    --santas_gray: #9ca3b4;
+    --dull_yellow: #DBD3C1;
+    --grey_blue: #6B737F;
+    --black_blue: #212330;
+    --dark_blue: #323D51;
+}
+
+body {
+    color: var(--grey-blue);
+    font-family: "Playfair Display", serif; /* Define with at least one font name and its related generic family name.*/
+    background-color: var(--black_blue);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/bkg_img_1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+header {
+    color: var(--dull_yellow);
+}
+
+main {
+    margin: 20px 70px 60px 70px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Pattaya", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    color: var(--light-twine);
+    text-align: center;
+    margin: 30px;
+}
+
+section {
+    margin: 30px;
+}
+
+div {
+
+}
+.center {
+    text-align: center;
+}
+
+.subheading {
+    background-color: var(--cumin-opaque);
+    color: var(--light-twine);
+    border-radius: 15px;
+    padding: 2px 55px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--white_rock);
+    overflow: auto;
+    display: flex;
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding-inline: 40px;
+    border-radius: 25px;
+    border: 8px solid var(--twine);
+    scrollbar-gutter: stable both-edges;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.container img {
+    max-width: 50vh;
+    max-height: 40vh;
+    padding: 10px;
+    display: block;
+}
+
+.container::-webkit-scrollbar {
+    background-color: transparent;
+    height: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--cumin-opaque);
+    border-radius: 25px;
+}
+
+.scroll-container {
+    background-color: var(--white_rock);
+    overflow: auto;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding-inline: 40px;
+    border-radius: 25px;
+    border: 8px solid var(--cumin);
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.proj-card {
+    flex: 0 0 auto;
+    display: inline-block;
+    max-width: 100%;
+    max-height: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.proj-card img {
+    max-width: 50vh;
+    max-height: 40vh;
+    padding: 10px;
+    display: block;
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.proj-card img:hover {
+    opacity: 1;
+}
+
+.img-card {
+    flex: 0 0 auto;
+    display: inline-block;
+    max-width: 100%;
+    max-height: 50%;
+    padding: 10px;
+    position: relative;
+    
+}
+
+@media (min-width: 600px) {
+    .img-card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    .img-card {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.img-card img {
+    max-width: 50vh;
+    max-height: 40vh;
+    padding: 10px;
+    display: block;
+    border: 2px solid var(--black_blue);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.img-card img:hover {
+    border-width: 4px;
+}
+
+.img-card-text {
+    color: var(--black_blue);
+    font-weight: 700;
+    z-index: 1; 
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 8px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 85%;
+    left: 55%;
+}
+
+.creative-card {
+    flex: 0 0 auto;
+    display: inline-block;
+    max-width: 100%;
+    max-height: 50%;
+    padding: 10px;
+    position: relative;
+    
+}
+
+.creative-card-text {
+    color: var(--black_blue);
+    font-weight: 700;
+    z-index: 1; 
+    text-align: center;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+footer {
+    color: var(--white_rock);
+    margin: 60px;
+    padding: 20px;
+    text-align: center;
+}
+  
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    display: inline-block;
+    background-color: var(--light-twine);
+    color: var(--black_blue);
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 2px;
+    border: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: var(--cumin);
+    color: var(--light-twine);
+    border: 2px;
+}
